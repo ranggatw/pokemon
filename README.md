@@ -2,6 +2,12 @@
 
 https://pokemon-sigma-five.vercel.app/login
 
+    username: testing
+    password: secret
+    --------------------
+    username: dattabot
+    password: password
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
