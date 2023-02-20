@@ -1,0 +1,11 @@
+.wrapper-homepage {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper-homepage {
+    max-width: 1100px;
+    border: 1px solid red;
+  }
+}

@@ -1,0 +1,13 @@
+.home-wrapper {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 992px) {
+  .home-wrapper {
+    max-width: 900px;
+    border: 1px solid red;
+  }
+}
