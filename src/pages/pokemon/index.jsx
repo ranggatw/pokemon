@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import useFetch from "../../utils/hooks/useFetch";
 const GetPokemon = () => {
   const [num, setNum] = useState(Math.floor(Math.random() * 650));

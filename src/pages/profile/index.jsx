@@ -1,25 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const navigate = useNavigate();
   const profile = JSON.parse(localStorage.getItem("userData"));
-  const pokemonList = JSON.parse(localStorage.getItem("pokemonHave"));
-  console.log(pokemonList);
-  console.log(profile.username);
+  const Logout = () => {
+    localStorage.removeItem("userData");
+    navigate("/login");
+  };
   return (
     <div>
       <h3>Profile</h3>
       <div>
         <div>username : {profile.username}</div>
-        <h5>Pokemon You Have: </h5>
-        <div style={{}}>
-          {pokemonList.map((pokemon, index) => (
-            <div key={index}>
-              <div>Pokemon name : {pokemon.name}</div>
-              {/* <div>Pokemon name : {pokemon.name}</div>
-              <div>Pokemon name : {pokemon.name}</div> */}
-            </div>
-          ))}
-        </div>
+        <button onClick={Logout}>Logout</button>
       </div>
     </div>
   );
