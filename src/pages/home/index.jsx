@@ -10,14 +10,20 @@ const HomePage = () => {
     <div>
       <h3>Home Page</h3>
       <div>
-        <h5>Pokemon You Have: </h5>
-        <div style={{}}>
-          {pokemonList.map((pokemon, index) => (
-            <div key={index}>
-              <div>Pokemon name : {pokemon.name}</div>
+        {pokemonList.length !== 0 ? (
+          <>
+            <h5>Pokemon You Have: </h5>
+            <div>
+              {pokemonList.map((pokemon, index) => (
+                <div key={index}>
+                  <div>Pokemon name : {pokemon.name}</div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        ) : (
+        "Get Your Pokemon first"
+        )}
       </div>
     </div>
   );
